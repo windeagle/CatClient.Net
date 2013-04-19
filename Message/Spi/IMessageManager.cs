@@ -14,6 +14,7 @@ namespace Com.Dianping.Cat.Message.Spi
         ///<value> CAT configuration </value>
         ClientConfig ClientConfig { get; }
 
+        bool HasSendingMessage { get; }
         //TransportManager TransportManager { get; }
 
         ///<summary>

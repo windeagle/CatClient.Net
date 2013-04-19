@@ -45,6 +45,8 @@ namespace Com.Dianping.Cat.Message.Spi.Internals
 
             LogEvent("Error", cause.GetType().FullName, "ERROR",
                      writer.ToString());
+
+            cause.Data["CatIgnore"] = true;
         }
 
         public virtual void LogEvent(String type, String name, String status, String nameValuePairs)

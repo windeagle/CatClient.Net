@@ -35,6 +35,8 @@ namespace Com.Dianping.Cat.Message.Spi.Internals
             get { return _mClientConfig; }
         }
 
+        public virtual bool HasSendingMessage { get { return _mSender != null && _mSender.HasSendingMessage; } }
+
         public virtual ITransaction PeekTransaction
         {
             get
