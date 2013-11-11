@@ -25,7 +25,7 @@ namespace Com.Dianping.Cat.Message.Spi.IO
             _mClientConfig = clientConfig;
             _mStatistics = statistics;
             _mActive = true;
-            _mQueue = new List<IMessageTree>(100000);
+            _mQueue = new List<IMessageTree>(1000);
             _mCodec = new PlainTextMessageCodec();
         }
 
@@ -63,7 +63,7 @@ namespace Com.Dianping.Cat.Message.Spi.IO
         {
             lock (_mQueue)
             {
-                if (_mQueue.Count < 100000)
+                if (_mQueue.Count < 1000)
                 {
                     _mQueue.Add(tree);
                 }
